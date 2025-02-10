@@ -11,12 +11,8 @@ function print(text) {
  */
 function isValid(name) {
   // ваш код...
-  if (name) {
-    if (name.length > 3) {
-      if (name.includes(" ")) {
-        return false;
-      } else return true;
-    } else return false;
+  if (name && name.length > 3 && !name.includes(" ")) {
+    return true;
   } else return false;
 }
 
