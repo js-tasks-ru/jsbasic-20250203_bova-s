@@ -47,9 +47,10 @@ export default class Carousel {
 
   #productAdd = (event) => {
     let target = event.target;
+    let id = target.closest(".carousel__slide").dataset.id;
     target.dispatchEvent(
       new CustomEvent("product-add", {
-        detail: this.id,
+        detail: id,
         bubbles: true,
       })
     );
